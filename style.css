@@ -1,0 +1,161 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+}
+
+body {
+    background: #fafafa;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: #000;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.menu li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.menu a:hover {
+    opacity: .7;
+}
+
+.hero {
+    padding: 80px 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.fade-in {
+    animation: fade 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.motor-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.motor-card {
+    width: 250px;
+    background: white;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 7px rgba(0,0,0,.2);
+    animation: fade 1s;
+}
+
+.search {
+    width: 80%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.filter {
+    margin-bottom: 20px;
+}
+
+.filter button {
+    padding: 8px 15px;
+    border: none;
+    margin: 3px;
+    border-radius: 5px;
+    background: #111;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.filter button:hover {
+    opacity: .7;
+}
+
+.motor-card .foto {
+    width: 100%;
+    height: 140px;
+    background: #ddd;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.motor-card button {
+    width: 48%;
+    padding: 6px 0;
+    margin-top: 6px;
+    border: none;
+    border-radius: 5px;
+    background: #111;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.motor-card button:hover {
+    opacity: .8;
+}
+
+/* popup detail */
+.popup-bg {
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,.6);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    display:none;
+}
+
+.popup-card {
+    background: white;
+    width: 350px;
+    padding: 15px;
+    border-radius: 10px;
+    animation: fade .4s;
+}
+
+.popup-card img {
+    width:100%;
+    border-radius: 8px;
+    margin-bottom:10px;
+}
+
+.close {
+    float:right;
+    cursor:pointer;
+    font-size:20px;
+}
+@media(max-width:600px){
+    .motor-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav { flex-direction: column; text-align:center; }
+}

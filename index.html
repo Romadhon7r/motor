@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roma Store - Jual Motor Bekas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+    <div class="logo">Roma Store</div>
+    <ul class="menu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="index.html">Stock Motor</a></li>
+        <li><a href="promo.html">Promo</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+</header>
+
+<section class="hero">
+    <h2 class="fade-in">Stock Motor Bekas Berkualitas</h2>
+</section>
+
+<section class="content">
+    <h3>Daftar Motor Bekas</h3>
+
+    <input type="text" id="search" placeholder="Cari motor bekas..." class="search">
+
+    <div class="filter">
+        <button onclick="filterMotor('all')">Semua</button>
+        <button onclick="filterMotor('sport')">Sport</button>
+        <button onclick="filterMotor('matic')">Matic</button>
+        <button onclick="filterMotor('bebek')">Bebek</button>
+    </div>
+
+    <div id="motorList" class="motor-list"></div>
+</section>
+
+<script src="script.js"></script>
+<div class="popup-bg" id="popup">
+    <div class="popup-card">
+        <span class="close" onclick="popup.style.display='none'">&times;</span>
+        <img id="popFoto">
+        <h3 id="popnama"></h3>
+        <p id="popHarga"></p>
+    </div>
+</div>
+
+</body>
+</html>
