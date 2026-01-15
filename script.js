@@ -21,7 +21,8 @@ function tampil(list) {
             <h4>${m.nama}</h4>
             <p>Rp ${m.harga.toLocaleString()}</p>
             <button onclick="detail(${i})">Detail</button>
-            <button onclick="pesan('${m.nama}')">Pesan</button>
+            <button onclick="pesan(${i})">Pesan</button>
+
         </div>`;
     });
     document.getElementById("motorList").innerHTML = html;
@@ -39,9 +40,7 @@ document.getElementById("search").onkeyup = function(){
     taconstmpil(motor.filter(m => m.nama.toLowerCase().includes(q)));
 }
 
-function pesan(nama){
-    window.open(`https://wa.me/6283142109714?text=Halo saya ingin pesan motor ${nama}`);
-}
+
 
 function detail(i){
     document.getElementById("popup").style.display="flex";
@@ -69,3 +68,24 @@ async function test() {
 }
 
 test();
+let motorDipilih = null;
+
+function pesan(index){
+    motorDipilih = motor[index];
+
+    document.getElementById("popup").style.display = "flex";
+    document.getElementById("popFoto").src = motorDipilih.foto;
+    document.getElementById("popNama").innerText = motorDipilih.nama;
+    document.getElementById("popHarga").innerText =
+        "Rp " + motorDipilih.harga.toLocaleString();
+}
+
+function pesan(index) {
+    const m = motor[index];
+
+    // simpan motor ke localStorage
+    localStorage.setItem("checkoutMotor", JSON.stringify(m));
+
+    // pindah ke halaman checkout
+    window.location.href = "checkout.html";
+}

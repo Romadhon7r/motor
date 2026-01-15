@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h3>Checkout Motor</h3>
+
+<div class="checkout-box">
+  <img id="foto" width="200">
+  <h4 id="namaMotor"></h4>
+  <p id="hargaMotor"></p>
+</div>
+
+<input id="namaPembeli" placeholder="Nama Lengkap">
+<input id="noHp" placeholder="No HP">
+<input id="alamat" placeholder="Alamat Lengkap">
+
+<button type="button" onclick="kirimPesanan()">Kirim Pesanan</button>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/checkout.js"></script>
+
+</body>
+</html>
