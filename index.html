@@ -37,15 +37,19 @@
     <div id="motorList" class="motor-list"></div>
 </section>
 
-<script src="script.js"></script>
+
 <div class="popup-bg" id="popup">
     <div class="popup-card">
         <span class="close" onclick="popup.style.display='none'">&times;</span>
+        <button onclick="pakai('${p.kode}')">Gunakan</button>
+
         <img id="popFoto">
         <h3 id="popnama"></h3>
         <p id="popHarga"></p>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
